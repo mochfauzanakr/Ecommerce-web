@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../../dist/output.css">
+  <title>Document</title>
+</head>
+<body class="">
+  <nav class="flex items-center justify-between px-6 py-4 ">
+        <div class="flex items-center space-x-8">
+          <a href="../html/homePage.html">
+          <div class="text-xl font-bold">Beliaja</div>
+          </a>
+        </div>
+          <div class="flex flex-wrap md:flex-nowrap items-center gap-4 w-full md:w-auto mt-4 md:mt-0">
+    <input id="searchBar" type="text" placeholder="Search..." class="px-3 py-1.5 border rounded-md w-full md:w-auto" />
+    <button class="text-lg"><i class="fa-solid fa-bell" style="color: #00171f;"></i></button>
+    <a href="../html/cart.html" class="text-lg"><i class="fa-solid fa-cart-shopping" style="color: #00171f;"></i></a>
+    <button class="text-lg"><i class="fa-solid fa-gear" style="color: #00171f;"></i></button>
+    <div class="relative group" id="profile-menu">
+      <img src="../image/WhatsApp Image 2025-05-01 at 22.30.28_587f176c.jpg" width="30" alt="Profile" class="cursor-pointer rounded-full" id="profile-btn">
+      <div id="dropdown" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg border hidden z-50">
+        <a href="../html/profile.html" class="flex px-4 py-4 text-sm text-gray-700 hover:bg-gray-100">
+          <img src="../image/WhatsApp Image 2025-05-01 at 22.30.28_587f176c.jpg" width="20" class="rounded-full mr-2" alt="">
+          <p class="text-xl">My Profile</p>
+        </a>
+        <button id="logoutBtn" class="block w-full text-left text-xl px-4 py-4 text-sm text-red-600 hover:bg-red-100">
+          <i class="fa-solid fa-right-from-bracket mr-2"></i>Log Out
+        </button>
+      </div>
+    </div>
+  </div>
+    </nav>
+  <div class="px-4 md:px-10 lg:px-24 py-4">
+     <h2 class="text-xl font-semibold mb-4">CheckOut</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="md:col-span-2 space-y-4">
+        <div class="bg-white rounded p-4 border">
+          <div class="flex justify-between items-center">
+            <div>
+              <p class="font-semibold">Delivery Address</p>
+              <p class="text-sm text-gray-600"><i class="fa-solid fa-location-dot mr-2" style="color: #00171f;"></i> Rumah </p>
+              <p class="text-sm text-gray-400">Lorem</p>
+            </div>
+            <button class="text-sm border rounded px-3 py-1 hover:text-white hover:bg-black">Change</button>
+          </div>
+        </div>
+
+      <div id="order-list" class="space-y-4"></div>
+        <!-- Delivery Type Selection -->
+      <div class="bg-white rounded p-4 border">
+        <div class="bg-white rounded-lg p-5 shadow-sm">
+          <h3 class="font-semibold text-lg mb-4">Tipe Pengiriman</h3>
+          
+          <div class="relative mb-3">
+            <button id="delivery-toggle" class="w-full flex justify-between items-center p-3 border rounded-lg hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200">
+              <div class="flex items-center">
+                <i class="fa-solid fa-box text-blue-500 text-xl mr-3"></i>
+                <div>
+                  <p class="text-left font-medium">Pilih metode pengiriman</p>
+                  <p class="text-xs text-gray-500">Ketuk untuk memilih</p>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-down text-gray-400"></i>
+            </button>
+            
+            <div id="delivery-options" class="hidden absolute w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10 overflow-hidden">
+              <div class="delivery-option border-b border-gray-100 p-4 cursor-pointer flex items-start hover:bg-blue-50" data-value="hemat">
+                <i class="fa-solid fa-leaf text-green-500 text-xl mt-1 mr-3"></i>
+                <div>
+                  <p class="font-medium">Hemat</p>
+                  <p class="text-sm text-gray-500">(4-5 Hari) - Rp 15.000</p>
+                </div>
+              </div>
+              <div class="delivery-option border-b border-gray-100 p-4 cursor-pointer flex items-start hover:bg-blue-50" data-value="reguler">
+                <i class="fa-solid fa-box text-blue-500 text-xl mt-1 mr-3"></i>
+                <div>
+                  <p class="font-medium">Reguler</p>
+                  <p class="text-sm text-gray-500">(2-4 Hari) - Rp 20.000</p>
+                </div>
+              </div>
+              <div class="delivery-option border-b border-gray-100 p-4 cursor-pointer flex items-start hover:bg-blue-50" data-value="express">
+                <i class="fa-solid fa-bolt text-yellow-500 text-xl mt-1 mr-3"></i>
+                <div>
+                  <p class="font-medium">Ekspres</p>
+                  <p class="text-sm text-gray-500">(1-2 Hari) - Rp 30.000</p>
+                </div>
+              </div>
+              <div class="delivery-option p-4 cursor-pointer flex items-start hover:bg-blue-50" data-value="instan">
+                <i class="fa-solid fa-motorcycle text-red-500 text-xl mt-1 mr-3"></i>
+                <div>
+                  <p class="font-medium">Instan</p>
+                  <p class="text-sm text-gray-500">(&lt; 3 Jam) - Rp 50.000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="selected-delivery" class="hidden p-3 bg-blue-50 border border-blue-200 rounded-lg flex items-center">
+            <i id="delivery-icon" class="fa-solid text-xl mr-3"></i>
+            <div>
+              <p id="delivery-name" class="font-medium"></p>
+              <p id="delivery-estimate" class="text-sm text-gray-600"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded p-4 border">
+        <h3 class="font-semibold mb-4">Payment Methods</h3>
+        <div class="space-y-2">
+          <label class="flex items-center gap-2">
+            <input type="radio" name="payment" checked /> E-wallet
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="radio" name="payment" checked /> Debit Card
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="radio" name="payment" /> COD
+          </label>
+        </div>
+        <div class="border-t mt-4 pt-4">
+          <p class="flex justify-between font-semibold">
+            <span>Total Tagihan</span>
+            <span id="total-bill">Rp 0</span>
+          </p>
+        </div>
+        <button id="checkout-btn" class="w-full bg-blue-600 text-white rounded py-2 mt-4">Bayar Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

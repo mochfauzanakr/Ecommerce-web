@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../../dist/output.css">
+</head>
+<body class="bg-gray-100">
+  <nav class="flex items-center justify-between px-6 py-4 ">
+        <div class="flex items-center space-x-8">
+          <a href="../html/homePage.html">
+          <div class="text-xl font-bold">Beliaja</div>
+          </a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <input type="text" placeholder="Search..." class="px-3 py-1.5 border rounded-md"/>
+          <button class="text-lg">
+            <i class="fa-solid fa-bell" style="color: #00171f;"></i>
+          </button>
+          <button class="text-lg cursor-pointer">
+            <a href="../html/cart.html">
+            <i class="fa-solid fa-cart-shopping" style="color: #00171f;"></i>
+            </a>
+          </button>
+          <button class="text-lg">
+            <i class="fa-solid fa-gear" style="color: #00171f;"></i>
+          </button>
+          <div class="">
+            <img src="../image/WhatsApp Image 2025-05-01 at 22.30.28_587f176c.jpg" width="30" alt="">
+          </div>
+        </div>
+    </nav>
+  <div class="max-w-5xl mx-auto p-4 bg-white min-h-screen flex flex-col">
+    <h1 class="text-2xl font-bold mb-6">Shopping Cart</h1>
+
+    <div id="cart-items" class="space-y-4 flex-1">
+    </div>
+    <div class="sticky bottom-0 bg-white z-10 border-t pt-4 mt-4 flex justify-between items-center px-6 py-4">
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input type="checkbox" id="select-all" />
+        <span>Select All</span>
+      </label>
+      <div id="last-updated" class="text-sm text-gray-500">Terakhir diubah: </div>
+      <div class="flex items-center mx-shadow gap-8">
+        <div>Total Price: <span id="total-price"></span></div>
+        <button id="checkout-btn" class="bg-blue-500 text-black px-4 py-2 rounded cursor-pointer">Checkout</button>
+      </div>
+    </div>
+  </div>
+  <script src="../js/cart.js"></script>
+</body>
+
+</html>

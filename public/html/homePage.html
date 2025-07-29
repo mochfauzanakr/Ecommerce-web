@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Home Page</title>
+</head>
+<body>
+   <nav class="flex flex-col md:flex-row items-start md:items-center justify-between px-6 py-4 border-b">
+  <div class="flex flex-col md:flex-row md:items-center md:space-x-8 w-full md:w-auto">
+    <div class="text-xl font-bold mb-2 md:mb-0">Beliaja</div>
+    <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm font-medium">
+      <li><a href="#" class="hover:text-[#006BB8] text-[#006BB8]">Home</a></li>
+      <li><a href="#" class="hover:text-[#006BB8]">Category</a></li>
+      <li><a href="#" class="hover:text-[#006BB8]">Flash Sale</a></li>
+      <li><a href="#" class="hover:text-[#006BB8]">Popular</a></li>
+    </ul>
+  </div>
+
+
+  <div class="flex flex-wrap md:flex-nowrap items-center gap-4 w-full md:w-auto mt-4 md:mt-0">
+    <input id="searchBar" type="text" placeholder="Search..." class="px-3 py-1.5 border rounded-md w-full md:w-auto" />
+    <button class="text-lg"><i class="fa-solid fa-bell" style="color: #00171f;"></i></button>
+    <a href="../html/cart.html" class="text-lg"><i class="fa-solid fa-cart-shopping" style="color: #00171f;"></i></a>
+    <button class="text-lg"><i class="fa-solid fa-gear" style="color: #00171f;"></i></button>
+    <div class="relative group" id="profile-menu">
+      <img src="../image/WhatsApp Image 2025-05-01 at 22.30.28_587f176c.jpg" width="30" alt="Profile" class="cursor-pointer rounded-full" id="profile-btn">
+      <div id="dropdown" class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg border hidden z-50">
+        <a href="../html/profile.html" class="flex px-4 py-4 text-sm text-gray-700 hover:bg-gray-100">
+          <img src="../image/WhatsApp Image 2025-05-01 at 22.30.28_587f176c.jpg" width="20" class="rounded-full mr-2" alt="">
+          <p class="text-xl">My Profile</p>
+        </a>
+        <button id="logoutBtn" class="block w-full text-left text-xl px-4 py-4 text-sm text-red-600 hover:bg-red-100">
+          <i class="fa-solid fa-right-from-bracket mr-2"></i>Log Out
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="flex justify-center">
+        <img src="../image/Copy of Special Promo.png" width="1080" alt="">
+    </div>
+
+    <!-- Categories Section -->
+    <section class="px-14 py-10">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-semibold">Shop By Categories</h2>
+            <div class=" flex space-x-2">
+              <button class="prev p-2 bg-gray-200 rounded hover:bg-gray-300">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="next p-2 bg-gray-200 rounded hover:bg-gray-300">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" id="categories-container">
+            <!-- Categories will be loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="bg-[#00171F] text-white px-4 sm:px-6 py-10 rounded-xl max-w-6xl mx-auto shadow-lg">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+            <div class="text-center lg:text-left mb-10 lg:mb-0 px-2 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+                Enhance Your<br />
+                Music Experience
+                </h2>
+                <div class="flex justify-center lg:justify-start space-x-4 mb-6">
+                <div class="bg-white flex-col text-black w-16 h-16 rounded-full flex items-center justify-center text-xs text-center leading-tight font-bold">
+                   <span class="text-xl" id="days">0</span>
+                    <span>Day</span>
+                </div>
+                <div class="bg-white flex-col text-black w-16 h-16 rounded-full flex items-center justify-center text-xs text-center leading-tight font-bold">
+                   <span class="text-xl" id="hours">0</span>
+                    <span>Hours</span>
+                </div>
+                <div class="bg-white flex-col text-black w-16 h-16 rounded-full flex items-center justify-center text-xs text-center leading-tight font-bold">
+                    <span class="text-xl" id="minutes">0</span>
+                    <span>Minutes</span>
+                </div>
+                <div class="bg-white flex-col text-black w-16 h-16 rounded-full flex items-center justify-center text-xs text-center leading-tight font-bold">
+                    <span class="text-xl" id="seconds">0</span>
+                    <span>Seconds</span>
+                </div>
+                </div>
+                <a href="#" class="inline-block bg-[#006BB8] hover:bg-[#007AC1] text-white font-bold py-3 px-6 rounded shadow transition">
+                Check It Out!
+                </a>
+            </div>
+            <div>
+                <img src="../image/over_ear-removebg-preview.png" alt="Headphones" class="w-[300px] sm:w-[360px] lg:w-[420px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="py-10 bg-white">
+        <div class="px-6 lg:px-12 px-20">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Flash Sale</h2>
+                <div class="space-x-2">
+                <button id="prev" class="p-2 bg-gray-200 rounded hover:bg-gray-300">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next" class="p-2 bg-gray-200 rounded hover:bg-gray-300">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                </div>
+            </div>
+            <div class="max-w-screen-xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5" id="flash-sale-container">
+                <!-- Flash sale items will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular This Week Section -->
+    <section class="py-10 bg-white">
+        <div class="px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-semibold mb-6">Popular This Week</h2>
+            <div class="max-w-screen-xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 " id="popular-container">
+                <!-- Popular items will be loaded by JavaScript -->
+            </div>
+            <div class="mt-8 text-center">
+                <button id="load-more-btn" class="px-6 py-2 bg-gray-100 hover:bg-gray-200 rounded">More Product</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#00171F] text-white py-10">
+        <div style="width: 400px;" class="max-w-screen-xl grid sm:grid-cols-2 gap-10 text-sm">
+            <div>
+                <h3 class="font-bold mb-3">Beliaja</h3>
+                <ul class="space-y-1 text-white/80">
+                <li><a href="#">About Beliaja</a></li>
+                <li><a href="#">Intellectual Property Right</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Flash Sale</a></li>
+                <li><a href="#">Promo Today</a></li>
+                <li><a href="#">Beliaja Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-1 ">
+                <div>
+                <h3 class="font-bold mb-3">Guide and Help</h3>
+                <ul class="space-y-1 text-white/80">
+                    <li><a href="#">Beliaja Care</a></li>
+                    <li><a href="#">Terms and Condition</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+                </div>
+                <div>
+                <h3 class="font-bold mb-3">Sell</h3>
+                <ul class="space-y-1 text-white/80">
+                    <li><a href="#">Seller Education Centre</a></li>
+                    <li><a href="#">Register Official Store</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/homePage.js"></script>
+</body>
+</html>
